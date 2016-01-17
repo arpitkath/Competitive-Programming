@@ -83,8 +83,7 @@ void heapify(Heap* heap, int i){
 int deleteMax(Heap* heap){
 	if(heap->count == 0) return -1;
 	int data = heap->arr[0];
-	heap->arr[0] = heap->arr[heap->count - 1];
-	heap->count--;
+	heap->arr[0] = heap->arr[--heap->count];
 	heapify(heap, 0);
 	return data;
 }
