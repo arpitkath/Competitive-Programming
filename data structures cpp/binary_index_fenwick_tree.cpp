@@ -49,6 +49,6 @@ int main(){
 	cout<<get(tree,0)<<endl;
 	//update(tree, n, 5, 3);
 	//cout<<get(tree, 5)<<endl;
-	//updateRange(tree,n, 0, 4, 5);
+	updateRange(tree,n, 0, n, 5);
 	//cout<<get(tree, 1,5);
 }

@@ -74,3 +74,4 @@ int main(){
 	//cout<<"--------"<<endl;
 	//for(int i = 1; i < 2*sz-1; i++) cout<<tree[i]<<endl;
 }
+

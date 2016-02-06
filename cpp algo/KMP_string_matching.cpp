@@ -20,20 +20,22 @@ void prefixTable(char P[], int n, int pre[]){
 	}
 }
 
-bool strMatchKMP(char T[], int n, char P[], int m){
+int strMatchKMP(char T[], int n, char P[], int m){
 	int pre[m];
 	prefixTable(P,m,pre);
 	int i = 0, j = 0;
+	int count = 0;
 	while(i < n){
 		if(P[j] == T[i] ){
-			if(j == m-1) return true;
+			if(j == m-1) count++;
 			j++;
 			i++;
 		}
 		else if(j > 0) j = pre[j-1];
 		else i++;
 	}
-	return false;
+	if(count>0) return count;
+	return -1;
 }
 int main(){
 	char T[] = "helloworld";
