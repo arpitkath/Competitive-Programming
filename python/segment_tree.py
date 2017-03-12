@@ -1,5 +1,5 @@
 def get_mid(start, end):
-    return (end - start) / 2
+    return start + (end - start) / 2
 
 def _build_tree(node, start, end, arr, tree):
     #print start,end
@@ -28,7 +28,7 @@ def _update(node, start, end, idx, val, tree):
     else:
         mid = get_mid(start, end)
         if idx <= mid:
-            _update(node*2, stat, mid, idx, val, tree)
+            _update(node*2, start, mid, idx, val, tree)
         else:
             _update((node*2)+1, mid+1, end, idx, val, tree)
         tree[node] = tree[node*2] + tree[(node*2)+1]
